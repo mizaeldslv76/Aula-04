@@ -17,14 +17,22 @@ async function consultaCEP(cep) {
     cidade: resposta.localidade,
     estado: resposta.estado,
     uf: resposta.uf,
-  };
+  }
+inserirdados(dadosdoCEP)
+console.log(dadosdoCEP)
 
-  console.log(dadosdoCEP)
+
+  
+}
+consultaCEP(enderecoUsuario.cep);
+
+
+function inserirdados(dadosdoCEP){
 
   enderecoUsuario.rua.innerText = dadosdoCEP.rua;
   enderecoUsuario.bairro.innerText = dadosdoCEP.bairro;
   enderecoUsuario.cidade.innerText = dadosdoCEP.cidade;
   enderecoUsuario.estado.innerText = dadosdoCEP.estado;
 
-}
-consultaCEP(enderecoUsuario.cep);
+
+}       
